@@ -1,1 +1,223 @@
-[{"model": "musicapp.song", "pk": 1, "fields": {"name": "Asal Mein", "album": "Asal Mein", "language": "Hindi", "song_img": "asalmein.jpg", "year": 2020, "singer": "Darshan Raval", "song_file": "Asal_Mein_-_Darshan_Raval_128_Kbps.mp3"}}, {"model": "musicapp.song", "pk": 2, "fields": {"name": "Baarish", "album": "Half Girlfriend", "language": "Hindi", "song_img": "Baarish.jpeg", "year": 2017, "singer": "Ash King, Shashaa Tirupati", "song_file": "01_-_Baarish_-_Half_Girlfriend_DJMaza.Life.mp3"}}, {"model": "musicapp.song", "pk": 3, "fields": {"name": "Soch Na Sake", "album": "Airlift", "language": "Hindi", "song_img": "sochnasake.jpeg", "year": 2015, "singer": "Arijit Singh, Tulsi Kumar", "song_file": "01_-_Soch_Na_Sake_Duet-MyMp3Singer.com.mp3"}}, {"model": "musicapp.song", "pk": 4, "fields": {"name": "Gulaabo", "album": "Shaandar", "language": "Hindi", "song_img": "gulaabo.jpg", "year": 2018, "singer": "Vishal Dadlani", "song_file": "01_-_Gulaabo-MyMp3Singer.net.mp3"}}, {"model": "musicapp.song", "pk": 5, "fields": {"name": "Ban Ja Tu Meri Rani", "album": "Tumhari Sullu", "language": "Hindi", "song_img": "banjarani.jpg", "year": 2017, "singer": "Guru Randhawa", "song_file": "Guru_Randhawa_-_Ban_Ja_Tu_Meri_Rani.mp3"}}, {"model": "musicapp.song", "pk": 6, "fields": {"name": "Aaj Se Teri", "album": "Padman", "language": "Hindi", "song_img": "aajseteri.jpg", "year": 2018, "singer": "Arijit Singh", "song_file": "Aaj_Se_Teri_Padman_128_Kbps.mp3"}}, {"model": "musicapp.song", "pk": 7, "fields": {"name": "Bekhayali", "album": "Kabir Singh", "language": "Hindi", "song_img": "bekhayali.jpg", "year": 2019, "singer": "Sachet Tandon", "song_file": "Bekhayali_-_Kabir_Singh_128_Kbps.mp3"}}, {"model": "musicapp.song", "pk": 8, "fields": {"name": "Tujhe Kitna Chahne Lage Hum", "album": "Kabir Singh", "language": "Hindi", "song_img": "tujhekitnachahnelagehum.jpg", "year": 2019, "singer": "Arijit Singh", "song_file": "Tujhe_Kitna_Chahne_Lage_-_Kabir_Singh_128_Kbps.mp3"}}, {"model": "musicapp.song", "pk": 9, "fields": {"name": "Haaye Oye", "album": "Haaye Oye", "language": "Hindi", "song_img": "haayeoye.jpg", "year": 2019, "singer": "Ash King", "song_file": "Haaye_Oye_-_amlijatt.in.mp3"}}, {"model": "musicapp.song", "pk": 10, "fields": {"name": "Sun Saathiya", "album": "ABCD 2", "language": "Hindi", "song_img": "sunsaathiya.jpg", "year": 2015, "singer": "Divya Kumar, Priya Saraiya", "song_file": "Sun_Saathiya.mp3"}}, {"model": "musicapp.song", "pk": 11, "fields": {"name": "Tie Me Down", "album": "Gravity", "language": "English", "song_img": "tiemedown.jpg", "year": 2018, "singer": "Gryffin, Elle Duhe", "song_file": "Gryffin_-_Tie_Me_Down_ft._Elley_DuhΘ.mp3"}}, {"model": "musicapp.song", "pk": 12, "fields": {"name": "A Sky Full of Stars", "album": "A Sky Full of Stars", "language": "English", "song_img": "skyfullofstars.jpg", "year": 2014, "singer": "Coldplay", "song_file": "Coldplay_-_A_Sky_Full_Of_Stars.mp3"}}, {"model": "musicapp.song", "pk": 13, "fields": {"name": "The Ocean", "album": "The Ocean", "language": "English", "song_img": "ocean.jpg", "year": 2016, "singer": "Mike Perry, Shy Martin", "song_file": "Mike_Perry_-_The_Ocean_ft._Shy_Martin_CC.mp3"}}, {"model": "musicapp.song", "pk": 14, "fields": {"name": "Let Me Love You", "album": "Encore", "language": "English", "song_img": "letmeloveyou.jpg", "year": 2016, "singer": "Justin Bieber, DJ Snake", "song_file": "DJ_Snake_-_Let_Me_Love_You_ft._Justin_Bieber_Official_Video.mp3"}}, {"model": "musicapp.song", "pk": 15, "fields": {"name": "I Like Me Better", "album": "I Met You When I Was 18", "language": "English", "song_img": "ilikemebetter.jpg", "year": 2017, "singer": "Lauv", "song_file": "Lauv_-_I_Like_Me_Better.mp3"}}, {"model": "musicapp.song", "pk": 16, "fields": {"name": "Attention", "album": "Thing For You", "language": "English", "song_img": "attention.png", "year": 2017, "singer": "Charlie Puth", "song_file": "Attention_-_Charlie_Puth.mp3"}}, {"model": "musicapp.song", "pk": 17, "fields": {"name": "Girls Like You", "album": "Red Pill Blues", "language": "English", "song_img": "girlslikeyou.jpg", "year": 2018, "singer": "Maroon 5, Cardi B", "song_file": "Maroon_5_-_Girls_Like_You_ft._Cardi_B.mp3"}}]
+[
+{
+  "model": "musicapp.song",
+  "pk": 1,
+  "fields": {
+    "name": "Velmuruka",
+    "album": "Neram",
+    "language": "Hindi",
+    "song_img": "c8656f388868dfb52e40ae87680a0853.jpg",
+    "year": 2005,
+    "singer": "M. G. Sreekumar",
+    "song_file": "Velmuruka_D9jR5Mv.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 2,
+  "fields": {
+    "name": "Baarish",
+    "album": "Half Girlfriend",
+    "language": "Hindi",
+    "song_img": "Baarish.jpeg",
+    "year": 2017,
+    "singer": "Ash King, Shashaa Tirupati",
+    "song_file": "01_-_Baarish_-_Half_Girlfriend_DJMaza.Life.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 3,
+  "fields": {
+    "name": "Soch Na Sake",
+    "album": "Airlift",
+    "language": "Hindi",
+    "song_img": "sochnasake.jpeg",
+    "year": 2015,
+    "singer": "Arijit Singh, Tulsi Kumar",
+    "song_file": "01_-_Soch_Na_Sake_Duet-MyMp3Singer.com.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 4,
+  "fields": {
+    "name": "Gulaabo",
+    "album": "Shaandar",
+    "language": "Hindi",
+    "song_img": "gulaabo.jpg",
+    "year": 2018,
+    "singer": "Vishal Dadlani",
+    "song_file": "01_-_Gulaabo-MyMp3Singer.net.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 5,
+  "fields": {
+    "name": "Ban Ja Tu Meri Rani",
+    "album": "Tumhari Sullu",
+    "language": "Hindi",
+    "song_img": "banjarani.jpg",
+    "year": 2017,
+    "singer": "Guru Randhawa",
+    "song_file": "Guru_Randhawa_-_Ban_Ja_Tu_Meri_Rani.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 6,
+  "fields": {
+    "name": "Aaj Se Teri",
+    "album": "Padman",
+    "language": "Hindi",
+    "song_img": "aajseteri.jpg",
+    "year": 2018,
+    "singer": "Arijit Singh",
+    "song_file": "Aaj_Se_Teri_Padman_128_Kbps.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 7,
+  "fields": {
+    "name": "Bekhayali",
+    "album": "Kabir Singh",
+    "language": "Hindi",
+    "song_img": "bekhayali.jpg",
+    "year": 2019,
+    "singer": "Sachet Tandon",
+    "song_file": "Bekhayali_-_Kabir_Singh_128_Kbps.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 8,
+  "fields": {
+    "name": "Tujhe Kitna Chahne Lage Hum",
+    "album": "Kabir Singh",
+    "language": "Hindi",
+    "song_img": "tujhekitnachahnelagehum.jpg",
+    "year": 2019,
+    "singer": "Arijit Singh",
+    "song_file": "Tujhe_Kitna_Chahne_Lage_-_Kabir_Singh_128_Kbps.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 9,
+  "fields": {
+    "name": "Haaye Oye",
+    "album": "Haaye Oye",
+    "language": "Hindi",
+    "song_img": "haayeoye.jpg",
+    "year": 2019,
+    "singer": "Ash King",
+    "song_file": "Haaye_Oye_-_amlijatt.in.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 10,
+  "fields": {
+    "name": "Sun Saathiya",
+    "album": "ABCD 2",
+    "language": "Hindi",
+    "song_img": "sunsaathiya.jpg",
+    "year": 2015,
+    "singer": "Divya Kumar, Priya Saraiya",
+    "song_file": "Sun_Saathiya.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 11,
+  "fields": {
+    "name": "Tie Me Down",
+    "album": "Gravity",
+    "language": "English",
+    "song_img": "tiemedown.jpg",
+    "year": 2018,
+    "singer": "Gryffin, Elle Duhe",
+    "song_file": "Gryffin_-_Tie_Me_Down_ft._Elley_DuhΘ.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 12,
+  "fields": {
+    "name": "A Sky Full of Stars",
+    "album": "A Sky Full of Stars",
+    "language": "English",
+    "song_img": "skyfullofstars.jpg",
+    "year": 2014,
+    "singer": "Coldplay",
+    "song_file": "Coldplay_-_A_Sky_Full_Of_Stars.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 13,
+  "fields": {
+    "name": "The Ocean",
+    "album": "The Ocean",
+    "language": "English",
+    "song_img": "ocean.jpg",
+    "year": 2016,
+    "singer": "Mike Perry, Shy Martin",
+    "song_file": "Mike_Perry_-_The_Ocean_ft._Shy_Martin_CC.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 14,
+  "fields": {
+    "name": "Let Me Love You",
+    "album": "Encore",
+    "language": "English",
+    "song_img": "letmeloveyou.jpg",
+    "year": 2016,
+    "singer": "Justin Bieber, DJ Snake",
+    "song_file": "DJ_Snake_-_Let_Me_Love_You_ft._Justin_Bieber_Official_Video.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 15,
+  "fields": {
+    "name": "I Like Me Better",
+    "album": "I Met You When I Was 18",
+    "language": "English",
+    "song_img": "ilikemebetter.jpg",
+    "year": 2017,
+    "singer": "Lauv",
+    "song_file": "Lauv_-_I_Like_Me_Better.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 16,
+  "fields": {
+    "name": "Attention",
+    "album": "Thing For You",
+    "language": "English",
+    "song_img": "attention.png",
+    "year": 2017,
+    "singer": "Charlie Puth",
+    "song_file": "Attention_-_Charlie_Puth.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 17,
+  "fields": {
+    "name": "Girls Like You",
+    "album": "Red Pill Blues",
+    "language": "English",
+    "song_img": "girlslikeyou.jpg",
+    "year": 2018,
+    "singer": "Maroon 5, Cardi B",
+    "song_file": "Maroon_5_-_Girls_Like_You_ft._Cardi_B.mp3"
+  }
+}
+]
