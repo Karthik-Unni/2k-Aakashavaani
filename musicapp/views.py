@@ -283,10 +283,17 @@ def mymusic(request):
     return render(request, 'musicapp/mymusic.html')
 
 
+@login_required(login_url='login')
 def playlist(request):
-    playlists = Playlist.objects.filter(user=request.user).values('playlist_name').distinct
+    playlists = (
+        Playlist.objects
+        .filter(user=request.user)
+        .values('playlist_name')
+        .distinct()
+    )
     context = {'playlists': playlists}
-    return render(request, 'musicapp/playlist.html', context=context)
+    return render(request, 'musicapp/playlist.html', context)
+
 
 
 def playlist_songs(request, playlist_name):
