@@ -75,30 +75,33 @@
 </section>
 
 {% if last_played %}
-<footer class="footer">
+<div class="content-footer">
   <div class="player">
     <div class="left">
       <img src="{{ last_played.song_img.url }}" height="70" width="70">
     </div>
+
     <div class="right">
       <div class="top">
         <span class="song">{{ last_played.name }}</span>
         <span class="artist">{{ last_played.album }}</span>
       </div>
+
       <div class="bottom">
         {% if first_time %}
-          <audio controls name="media">
+          <audio controls>
             <source src="{{ last_played.song_file.url }}" type="audio/mpeg">
           </audio>
         {% else %}
-          <audio controls autoplay name="media">
+          <audio controls autoplay>
             <source src="{{ last_played.song_file.url }}" type="audio/mpeg">
           </audio>
         {% endif %}
       </div>
     </div>
   </div>
-</footer>
+</div>
 {% endif %}
+
 
 {% endblock body %}

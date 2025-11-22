@@ -283,10 +283,17 @@ def mymusic(request):
     return render(request, 'musicapp/mymusic.html')
 
 
+@login_required(login_url='login')
 def playlist(request):
-    playlists = Playlist.objects.filter(user=request.user).values('playlist_name').distinct
+    playlists = (
+        Playlist.objects
+        .filter(user=request.user)
+        .values('playlist_name')
+        .distinct()
+    )
     context = {'playlists': playlists}
-    return render(request, 'musicapp/playlist.html', context=context)
+    return render(request, 'musicapp/playlist.html', context)
+
 
 
 def playlist_songs(request, playlist_name):
@@ -303,14 +310,23 @@ def playlist_songs(request, playlist_name):
     return render(request, 'musicapp/playlist_songs.html', context=context)
 
 
+@login_required(login_url='login')
 def favourite(request):
-    songs = Song.objects.filter(favourite__user=request.user, favourite__is_fav=True).distinct()
-    print(f'songs: {songs}')
-    
+    songs = Song.objects.filter(
+        favourite__user=request.user,
+        favourite__is_fav=True
+    ).distinct()
+
     if request.method == "POST":
         song_id = list(request.POST.keys())[1]
-        favourite_song = Favourite.objects.filter(user=request.user, song__id=song_id, is_fav=True)
+        favourite_song = Favourite.objects.filter(
+            user=request.user,
+            song__id=song_id,
+            is_fav=True
+        )
         favourite_song.delete()
         messages.success(request, "Removed from favourite!")
+    
     context = {'songs': songs}
-    return render(request, 'musicapp/favourite.html', context=context)
+    return render(request, 'musicapp/favourite.html', context)
+

@@ -444,3 +444,61 @@ a:focus {
     width: 100%;
   }
 }
+/* ---------- Glassmorphism Footer ---------- */
+.content-footer {
+    position: fixed;
+    bottom: 0;
+    left: 240px; /* Start after sidebar */
+    right: 0;
+
+    /* Glass effect */
+    background: rgba(20, 20, 20, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 12px 22px;
+    z-index: 9999;
+
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.4);
+    border-radius: 18px 18px 0 0;
+}
+
+/* Player inside footer */
+.content-footer .player {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.content-footer .left img {
+    height: 60px;
+    width: 60px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.content-footer .song {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.content-footer .artist {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* audio bar styling improvement */
+.content-footer audio {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* Mobile: sidebar disappears → footer spans full width */
+@media (max-width: 900px) {
+    .content-footer {
+        left: 0;
+        right: 0;
+        border-radius: 12px 12px 0 0;
+    }
+}
