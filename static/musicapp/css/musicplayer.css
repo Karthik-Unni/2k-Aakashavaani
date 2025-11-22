@@ -554,3 +554,123 @@ a:focus {
   border-color: var(--ak-accent);
   box-shadow: 0 0 5px rgba(255,215,0,0.3);
 }
+/* ------ FAVOURITE TABLE DARK MODE ---------- */
+.fav-table {
+    width: 95%;
+    margin: 30px auto;
+    border-collapse: collapse;
+    background: transparent;
+    color: #fff;
+    font-size: 15px;
+}
+
+.fav-table thead tr {
+    background: rgba(255,255,255,0.05);
+    text-align: left;
+    font-weight: bold;
+}
+
+.fav-table th, .fav-table td {
+    padding: 14px 18px;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Row hover effect */
+.fav-table tbody tr:hover {
+    background: rgba(255,255,255,0.07);
+    transition: 0.2s ease-in-out;
+}
+
+/* Song image inside list */
+.fav-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 6px;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+/* Song title + album stacked */
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.song-artist {
+    font-size: 13px;
+    color: #b3b3b3;
+}
+
+/* Remove button */
+.remove-btn {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #ff4d4d;
+    color: white;
+    font-size: 13px;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.remove-btn:hover {
+    background: #ff1a1a;
+}
+
+/* Mini audio player */
+.audio-mini {
+    width: 180px;
+    height: 28px;
+}
+/* Remove the blue background */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+thead tr {
+    background: #111; /* dark header */
+    color: #ddd;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.song-row {
+    background: transparent;
+    border-bottom: 1px solid #333;
+    transition: background 0.2s ease;
+}
+
+.song-row:hover {
+    background: rgba(255,255,255,0.08);
+}
+
+/* Song cover image */
+.cover-img {
+    height: 45px;
+    width: 45px;
+    border-radius: 5px;
+    margin-right: 12px;
+}
+
+/* Song + Artist container */
+.song-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-info .text .title {
+    font-size: 15px;
+    color: white;
+}
+
+.song-info .text .artist {
+    font-size: 13px;
+    color: #aaa;
+}

@@ -333,21 +333,20 @@ def playlist_songs(request, playlist_name):
 
 @login_required(login_url='login')
 def favourite(request):
-    songs = Song.objects.filter(
-        favourite__user=request.user,
-        favourite__is_fav=True
-    ).distinct()
+    liked_songs = Favourite.objects.filter(
+        user=request.user,
+        is_fav=True
+    ).select_related("song")
 
     if request.method == "POST":
         song_id = list(request.POST.keys())[1]
-        favourite_song = Favourite.objects.filter(
+        Favourite.objects.filter(
             user=request.user,
             song__id=song_id,
             is_fav=True
-        )
-        favourite_song.delete()
+        ).delete()
         messages.success(request, "Removed from favourite!")
-    
-    context = {'songs': songs}
-    return render(request, 'musicapp/favourite.html', context)
 
+    return render(request, 'musicapp/favourite.html', {
+        'liked_songs': liked_songs
+    })
