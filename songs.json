@@ -185,39 +185,52 @@
   "model": "musicapp.song",
   "pk": 15,
   "fields": {
-    "name": "I Like Me Better",
-    "album": "I Met You When I Was 18",
-    "language": "English",
-    "song_img": "ilikemebetter.jpg",
-    "year": 2017,
-    "singer": "Lauv",
-    "song_file": "Lauv_-_I_Like_Me_Better.mp3"
+    "name": "Maanathe Chandiranothoru",
+    "album": "Chandralekha",
+    "language": "Hindi",
+    "song_img": "happy-mohanlal.gif",
+    "year": 1997,
+    "singer": "Berny-Ignatius, M. G. Sreekumar, Subha",
+    "song_file": "Maanathe_Chandiranothoru.mp3"
   }
 },
 {
   "model": "musicapp.song",
   "pk": 16,
   "fields": {
-    "name": "Attention",
-    "album": "Thing For You",
-    "language": "English",
-    "song_img": "attention.png",
-    "year": 2017,
-    "singer": "Charlie Puth",
-    "song_file": "Attention_-_Charlie_Puth.mp3"
+    "name": "Eeran Megham",
+    "album": "Chithram",
+    "language": "Hindi",
+    "song_img": "7ffa1c3ecb1eef2dc62b3632f7970fcc.gif",
+    "year": 1988,
+    "singer": "Kannur Rajan, Shibu Chakravarthy, M. G. Sreekumar",
+    "song_file": "Eeranmegham.mp3"
   }
 },
 {
   "model": "musicapp.song",
   "pk": 17,
   "fields": {
-    "name": "Girls Like You",
-    "album": "Red Pill Blues",
-    "language": "English",
-    "song_img": "girlslikeyou.jpg",
-    "year": 2018,
-    "singer": "Maroon 5, Cardi B",
-    "song_file": "Maroon_5_-_Girls_Like_You_ft._Cardi_B.mp3"
+    "name": "Alare Govinda",
+    "album": "Kakkakuyil",
+    "language": "Hindi",
+    "song_img": "mukesh-anthass.gif",
+    "year": 2001,
+    "singer": "Sangeetha Sajith, M. G. Sreekumar",
+    "song_file": "Alare_Govinda_-_Nikhil.mp3"
+  }
+},
+{
+  "model": "musicapp.song",
+  "pk": 18,
+  "fields": {
+    "name": "Valuthaayoru Marathinte",
+    "album": "Chathurangam",
+    "language": "Hindi",
+    "song_img": "nadodikkattu-mohanlal.gif",
+    "year": 2002,
+    "singer": "Mohanlal, M. G. Sreekumar",
+    "song_file": "Valuthaayoru_Marathinte.mp3"
   }
 }
 ]
