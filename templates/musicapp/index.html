@@ -6,7 +6,8 @@
 {% block body %}
 
 <div class="ak-main-header">
-  <h1>Your Library</h1>
+  <h1>Discover Music</h1>
+
   <small>
     {% if query_search %}
       Showing search results
@@ -25,11 +26,12 @@
                name="q"
                value="{{ request.GET.q }}"
                placeholder="Search songs, artists, albums" />
-        <div class="input-group-append">
-          <button type="submit" class="btn btn-primary">
-            <i class="fa fa-search" aria-hidden="true"></i> Search
-          </button>
-        </div>
+     <div class="input-group-append">
+  <button type="submit" class="ak-search-btn">
+    <i class="fa fa-search"></i>
+  </button>
+</div>
+
       </div>
     </div>
   </form>
