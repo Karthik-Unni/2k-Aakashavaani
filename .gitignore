@@ -334,3 +334,4 @@ reddit/media/
 !.envs/.local/
 
 .idea
+db.sqlite3
