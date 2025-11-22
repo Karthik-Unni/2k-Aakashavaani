@@ -3,6 +3,22 @@ from .models import *
 from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+# SAFE fallback helper for last played song
+def get_safe_last_played(user=None):
+    # Prefer the user's recent song
+    if user and not user.is_anonymous:
+        r = Recent.objects.filter(user=user).order_by('-id').first()
+        if r:
+            return r.song
+
+    # If any song exists, return the first one
+    fallback = Song.objects.first()
+    if fallback:
+        return fallback
+
+    # Database empty → return None and templates can check it
+    return None
+
 
 
 # Create your views here.
@@ -29,11 +45,12 @@ def index(request):
             last_played_song = Song.objects.get(id=last_played_id)
         else:
             first_time = True
-            last_played_song = Song.objects.get(id=7)
+            last_played_song = get_safe_last_played(request.user)
 
     else:
         first_time = True
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
+
 
     #Display all songs
     songs = Song.objects.all()
@@ -81,7 +98,7 @@ def hindi_songs(request):
         last_played_id = last_played_list[0]['song_id']
         last_played_song = Song.objects.get(id=last_played_id)
     else:
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
 
     query = request.GET.get('q')
 
@@ -104,7 +121,8 @@ def english_songs(request):
         last_played_id = last_played_list[0]['song_id']
         last_played_song = Song.objects.get(id=last_played_id)
     else:
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
+
 
     query = request.GET.get('q')
 
@@ -163,7 +181,8 @@ def all_songs(request):
             last_played_song = Song.objects.get(id=last_played_id)
     else:
         first_time = True
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
+
 
     
     # apply search filters
@@ -206,7 +225,8 @@ def recent(request):
         last_played_id = last_played_list[0]['song_id']
         last_played_song = Song.objects.get(id=last_played_id)
     else:
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
+
 
     #Display recent songs
     recent = list(Recent.objects.filter(user=request.user).values('song_id').order_by('-id'))
@@ -246,7 +266,8 @@ def detail(request, song_id):
         last_played_id = last_played_list[0]['song_id']
         last_played_song = Song.objects.get(id=last_played_id)
     else:
-        last_played_song = Song.objects.get(id=7)
+        last_played_song = get_safe_last_played(request.user)
+
 
 
     playlists = Playlist.objects.filter(user=request.user).values('playlist_name').distinct
