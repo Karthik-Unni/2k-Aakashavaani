@@ -44,7 +44,9 @@ a:focus {
 .ak-app-shell {
   display: flex;
   min-height: 100vh;
+  width: 100%;         /* make shell span full viewport width */
 }
+
 
 /* Sidebar */
 .ak-sidebar {
@@ -121,9 +123,15 @@ a:focus {
 
 .ak-main {
   flex: 1;
-  padding: 24px 28px;
+  padding: 24px 40px;
   overflow-y: auto;
+  max-width: none;
+  margin: 0;
 }
+
+
+
+
 
 /* Page title row */
 .ak-main-header {

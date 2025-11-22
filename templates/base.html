@@ -33,24 +33,21 @@
     <aside class="ak-sidebar">
         <div>
             <div class="ak-brand" style="display: flex; justify-content: center; margin-bottom: 28px;">
-              <img src="{% static 'musicapp/images/Logo.jpg' %}" 
-                style="width: 220px; height: auto;">
-              </div>
+                <img src="{% static 'musicapp/images/Logo.jpg' %}"
+                     style="width: 220px; height: auto;">
+            </div>
 
             <nav class="ak-nav">
-                <!-- Home -->
                 <a href="{% url 'index' %}" class="ak-nav-item">
                     <span class="icon"><i class="fa fa-home"></i></span>
                     <span>Home</span>
                 </a>
 
-                <!-- Search (scrolls to search form on home) -->
                 <a href="{% url 'index' %}#search" class="ak-nav-item">
                     <span class="icon"><i class="fa fa-search"></i></span>
                     <span>Search</span>
                 </a>
 
-                <!-- My library / All songs -->
                 <a href="{% url 'all_songs' %}" class="ak-nav-item">
                     <span class="icon"><i class="fa fa-music"></i></span>
                     <span>My library</span>
@@ -58,13 +55,11 @@
 
                 <hr class="ak-nav-separator">
 
-                <!-- New playlist -->
                 <a href="{% url 'playlist' %}" class="ak-nav-item">
                     <span class="icon"><i class="fa fa-plus-circle"></i></span>
                     <span>New playlist</span>
                 </a>
 
-                <!-- Liked songs -->
                 <a href="{% url 'favourite' %}" class="ak-nav-item">
                     <span class="icon"><i class="fa fa-heart"></i></span>
                     <span>Liked songs</span>
@@ -96,10 +91,40 @@
         </div>
     </aside>
 
+    <!-- MAIN CONTENT FROM CHILD TEMPLATES -->
     <main class="ak-main">
         {% block body %}{% endblock body %}
     </main>
+</div>  <!-- end .ak-app-shell -->
+
+{% if last_played %}
+<div class="content-footer">
+  <div class="player">
+    <div class="left">
+      <img src="{{ last_played.song_img.url }}" height="70" width="70">
+    </div>
+
+    <div class="right">
+      <div class="top">
+        <span class="song">{{ last_played.name }}</span>
+        <span class="artist">{{ last_played.album }}</span>
+      </div>
+
+      <div class="bottom">
+        {% if first_time %}
+          <audio controls>
+            <source src="{{ last_played.song_file.url }}" type="audio/mpeg">
+          </audio>
+        {% else %}
+          <audio controls autoplay>
+            <source src="{{ last_played.song_file.url }}" type="audio/mpeg">
+          </audio>
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
+{% endif %}
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
